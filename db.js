@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb://127.0.0.1:27017/Teachersday", {
+mongoose.connect("svc.sel4.cloudtype.app:31481", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {

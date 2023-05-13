@@ -28,6 +28,10 @@ main {
   transform: rotate(30deg);
 }
 
+#pw {
+  text-align: center;
+}
+
 .pw-form {
   width: 100%;
   text-align: center;

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb://svc.sel4.cloudtype.app:31481", {
+mongoose.connect("mongodb://35.216.31.77:31481", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {

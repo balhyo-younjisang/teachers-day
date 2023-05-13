@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect("mongodb://admin:Yydo0825..@mongo:27017", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {

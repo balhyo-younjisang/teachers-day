@@ -17,7 +17,14 @@ export const postUpload = async (req, res) => {
     const { content, teacher, classRoom, number } = req.body;
     const date = toStringByFormatting();
     const author = toAuthorName(classRoom, number);
-    console.log(author);
+    const returnData = {
+        warning: "편지를 보낼 선생님을 정확히 지정해주세요!",
+        content: content
+    }
+
+    if (teacher === "select") return res.render("letter.ejs", { data: { returnData } })
+
+    // console.log(author);
 
     // console.log("Create", title, author, content, teacher);
     await Letter.create({
@@ -57,5 +64,5 @@ export const postEnter = (req, res) => {
     return res.render("main.html")
 }
 export const getUpload = async (req, res) => {
-    return res.render("letter.html");
+    return res.render("letter.ejs");
 }

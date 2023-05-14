@@ -6,6 +6,7 @@ import morgan from "morgan";
 import letterRouter from "./routers/letterRouter.js";
 import path from "path";
 import { renderFile } from "ejs";
+import helmet from "helmet";
 const __dirname = path.resolve();
 
 const PORT = 3000;
@@ -13,6 +14,7 @@ const app = express();
 
 const logger = morgan("dev");
 
+app.use(helmet);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

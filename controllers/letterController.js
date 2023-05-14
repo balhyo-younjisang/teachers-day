@@ -17,12 +17,9 @@ export const postUpload = async (req, res) => {
     const { content, teacher, classRoom, number } = req.body;
     const date = toStringByFormatting();
     const author = toAuthorName(classRoom, number);
-    const returnData = {
-        warning: "편지를 보낼 선생님을 정확히 지정해주세요!",
-        content: content
-    }
+    const teacherName = ["이영국", "유미선", "김도형", "김성인", "조영식", "박경은", "서민정", "김명수", "이미현", "송창용", "최승호", "김영국", "권순용", "권성현", "정동엽", "류주희", "김경애"];
 
-    if (teacher === "select") return res.render("letter.ejs", { data: { returnData } })
+    if (teacher === "select" || teacherName.indexOf(teacher) < 0) return res.render("letter.ejs");
 
     // console.log(author);
 

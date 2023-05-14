@@ -14,7 +14,7 @@ const app = express();
 
 const logger = morgan("dev");
 
-app.use(helmet);
+app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

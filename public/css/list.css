@@ -23,7 +23,7 @@ header {
   margin-top: 10px;
 }
 
-nav {
+nav .selectTeacher {
   margin-left: 80px;
 }
 
@@ -63,4 +63,31 @@ a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  li {
+    height: 50px;
+  }
+
+  li a {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .selectTeacher {
+    height: 25px;
+  }
+
+  nav .selectTeacher {
+    margin: 0;
+  }
+
+  button {
+    height: 25px;
+  }
 }
